@@ -5,59 +5,107 @@
         public function __construct() {
             $this->routes = [
                 'GET' =>[
-                    '/noticias' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'getNoticias'
-                    ],
-                    '/autores' => [
-                        'controller' => 'AutorController',
-                        'function' => 'getAutores'
-                    ],
-                    '/usuarios' => [
+                    '/usuarios' => [ #ok
                         'controller' => 'UsuarioController',
                         'function' => 'getUsuarios'
+                    ],
+                    '/status' => [ #ok
+                        'controller' => 'StatusController',
+                        'function' => 'getStatus'
+                    ],
+                    '/produtos' => [ #ok
+                        'controller' => 'ProdutoController',
+                        'function' => 'getProduto'
+                    ],
+                    '/pedidos' => [ #ok
+                        'controller' => 'PedidoController',
+                        'function' => 'getPedido'
                     ]
                 ],
                 'POST' => [
-                    '/criar-noticia' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'createNoticia'
+                    '/buscar-usuario' => [ #ok
+                        'controller' => 'UsuarioController',
+                        'function' => 'getUsuarioS'
                     ],
-                    '/cadastrar-autor' => [
-                        'controller' => 'AutorController',
-                        'function' => 'createAutor'
-                    ],
-                    '/criar-usuario' => [
-                        'controller' => 'AutorController',
+                    '/cadastrar-usuario' => [ #ok
+                        'controller' => 'UsuarioController',
                         'function' => 'createUsuario'
+                    ],
+                    '/buscar-status' => [ #ok
+                        'controller' => 'StatusController',
+                        'function' => 'getStatus'
+                    ],
+                    '/buscar-produto' => [  #ok
+                        'controller' => 'ProdutoController',
+                        'function' => 'getProduto'
+                    ],
+                    '/cadastrar-produto' => [ #ok
+                        'controller' => 'ProdutoController',
+                        'function' => 'createProduto'
+                    ],
+                    '/itens-pedido' => [ #ok
+                        'controller' => 'ItemPedidoController',
+                        'function' => 'getItemPedido'
+                    ],
+                    '/cadastrar-item-pedido' => [ #ok
+                        'controller' => 'ItemPedidoController',
+                        'function' => 'createItemPedido'
+                    ],
+                    '/buscar-pedido' => [ #ok
+                        'controller' => 'PedidoController',
+                        'function' => 'getPedido'
+                    ],
+                    '/cadastrar-pedido' => [ #ok
+                        'controller' => 'PedidoController',
+                        'function' => 'createPedido'
+                    ],
+                    '/buscar-pedido-pessoa' => [ #ok  
+                        'controller' => 'PedidoController',
+                        'function' => 'getPedidoPessoa'
+                    ],
+                    '/valor-total-pedido' => [ #ok 
+                        'controller' => 'PedidoController',
+                        'function' => 'buscarValorTotalPedido'
                     ]
                 ],
                 'PUT' => [
-                    '/atualizar-noticia' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'updateNoticia'
-                    ],
-                    '/atualizar-autor' => [
-                        'controller' => 'AutorController',
-                        'function' => 'updateAutor'
-                    ],
-                    '/atualizar-usuario' => [
+                    '/editar-usuario' => [ 
                         'controller' => 'UsuarioController',
                         'function' => 'updateUsuario'
+                    ],
+                    '/editar-item-pedido' => [
+                        'controller' => 'ItemPedidoController',
+                        'function' => 'updateItemPedido'
+                    ],
+                    '/editar-produto' => [
+                        'controller' => 'ProdutoController',
+                        'function' => 'updateProduto'
+                    ],
+                    '/editar-pedido' => [
+                        'controller' => 'PedidoController',
+                        'function' => 'updatePedido'
+                    ],
+                    '/editar-status-pedido' => [
+                        'controller' => 'PedidoController',
+                        'function' => 'updateStatusPedido'
                     ]
                 ],
                 'DELETE' => [
-                    '/excluir-noticia' => [
-                        'controller' => 'NoticiaController',
-                        'function' => 'deleteNoticia'
-                    ],
-                    '/excluir-autor' => [
-                        'controller' => 'AutorController',
-                        'function' => 'deleteAutor'
-                    ],
                     '/excluir-usuario' => [
                         'controller' => 'UsuarioController',
                         'function' => 'deleteUsuario'
+                    ],
+                    '/excluir-item-pedido' => [
+                        'controller' => 'ItemPedidoController',
+                        'function' => 'deleteItemPedido'
+                    ],
+                    '/excluir-produto' => [
+                        'controller' => 'ProdutoController',
+                        'function' => 'deleteProduto'
+                    ],
+                    '/excluir-pedido' => [
+                        'controller' => 'PedidoController',
+                        'function' => 'deletePedido'
                     ]
                 ]
             ];
